@@ -26,7 +26,7 @@ const Header = () => {
             <li className="font-bold">
               <a href="#projects">Projects</a>
             </li>
-            <li className="font-bold">Contact</li>
+            <li className="font-bold"><a href="#contact">Contact</a></li>
             <li className="font-bold resume uppercase p-1"><a href="https://drive.google.com/file/d/18j8kcXEJ99som0ok3fS8PWpMmtGwpMK3/view?usp=share_link">Resume</a></li>
             <li className="">
               <a
@@ -37,7 +37,7 @@ const Header = () => {
                 <FaGithub
                   className="hover:text-blue-500 transition 
             ease-in-out delay-150 hover:-translate-y-1 
-            hover:scale-110 duration-300 text-2xl text-slate-200 cursor-pointer"
+            hover:scale-110 duration-300 text-2xl text-slate-500 cursor-pointer"
                 />
               </a>
             </li>

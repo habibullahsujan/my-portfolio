@@ -13,8 +13,8 @@ const Home = () => {
         <Header />
       </div>
       <div className="lg:w-[90%] w-full mx-auto">
-        <div className="lg:w-[80%] w-full mx-auto my-20 text-slate-500 heading">
-          <span className="text-6xl font-bold block my-5">
+        <div className="lg:w-[80%] w-full mx-auto my-20 text-slate-500">
+          <span className="text-6xl font-bold block my-5 heading">
             Hi, My Name is <span className="name">Habib</span>.
           </span>
           <span className="text-2xl font-semibold space-x-3">
