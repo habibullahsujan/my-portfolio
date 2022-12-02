@@ -1,200 +1,80 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { useState } from "react";
+import { FaGithub, FaLinkedin, FaTwitter, FaAlignJustify } from "react-icons/fa";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  let activeStyle = {
-    border: "1px solid orange",
-    padding: "10px",
-  };
-
+  const [open, setOpen] = useState(false);
   return (
-    <div className="text-gray-800">
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="relative flex items-center justify-between">
-          <a
-            href="/"
-            aria-label="Company"
-            title="Company"
-            className="inline-flex items-center"
-          >
-            <img className="h-12 w-30" src={""} alt="" />
-            <span className=" text-xl font-bold tracking-wide  uppercase">
-        Home
-            </span>
-          </a>
-          <img
-            className="h-10 rounded-[50%] cursor-pointer block md:hidden sm:hidden"
-            src={""}
-            alt=""
-          />
-          <ul className=" items-center hidden space-x-8 lg:flex">
-            <li>
-              <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                to={"/about"}
-                aria-label="Our product"
-                title="Frequently Asked Question"
-                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                About Me
-              </NavLink>
+    <div className="relative">
+      <div className="my-5 text-slate-500 hidden lg:block">
+        <ul className="w-[90%] mx-auto flex justify-between">
+          <li className="text-2xl font-semibold name uppercase">Home</li>
+          <div className="flex gap-8">
+            <li className="font-bold">About</li>
+            <li className="font-bold">Projects</li>
+            <li className="font-bold">Contact</li>
+            <li className="font-bold resume uppercase p-1">Resume</li>
+            <li className="">
+              <FaGithub
+                className="hover:text-blue-500 transition 
+              ease-in-out delay-150 hover:-translate-y-1 
+              hover:scale-110 duration-300 text-2xl text-slate-500 cursor-pointer"
+              />
             </li>
             <li>
-              <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                to={"/resume"}
-                aria-label="Our product"
-                title="Frequently Asked Question"
-                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                Resume
-              </NavLink>
+              <FaLinkedin
+                className="hover:text-blue-500 transition 
+              ease-in-out delay-150 hover:-translate-y-1 
+              hover:scale-110 duration-300 text-2xl text-slate-500 cursor-pointer"
+              />
             </li>
             <li>
-              <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                to={"/blog"}
-                aria-label="Product pricing"
-                title="Blog"
-                className="text-white font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                Portfolio
-              </NavLink>
+              <FaTwitter
+                className="hover:text-blue-500 transition 
+              ease-in-out delay-150 hover:-translate-y-1 
+              hover:scale-110 duration-300 text-2xl text-slate-500 cursor-pointer"
+              />
             </li>
-            <li>
-              <NavLink
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                to={"/contact"}
-                aria-label="Product pricing"
-                title="Blog"
-                className="text-white font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="lg:hidden">
-            <button
-              aria-label="Open Menu"
-              title="Open Menu"
-              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline bg-slate-400"
-              onClick={() => setIsMenuOpen(true)}
-            >
-              <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                />
-              </svg>
-            </button>
-            {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full">
-                <div className="p-5 bg-white border rounded shadow-sm">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <button
-                        aria-label="Close Menu"
-                        title="Close Menu"
-                        className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <nav>
-                    <ul className="space-y-4">
-                      <li>
-                        <NavLink
-                          style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                          }
-                          to={"/about"}
-                          aria-label="Our product"
-                          title="Frequently Asked Question"
-                          className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-teal-accent-400"
-                        >
-                          About Me
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                          }
-                          to={"/resume"}
-                          aria-label="Our product"
-                          title="Frequently Asked Question"
-                          className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-teal-accent-400"
-                        >
-                          Resume
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                          }
-                          to={"/blog"}
-                          aria-label="Product pricing"
-                          title="Blog"
-                          className="text-white font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-                        >
-                          Portfolio
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                          }
-                          to={"/contact"}
-                          aria-label="Product pricing"
-                          title="Blog"
-                          className="text-white font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-                        >
-                          Contact
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <label
-                          htmlFor="Toggle1"
-                          className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100"
-                        >
-                          <span className="relative">
-                            <input
-                              id="Toggle1"
-                              type="checkbox"
-                              className=" hidden peer"
-                            />
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            )}
           </div>
-        </div>
+        </ul>
       </div>
+      <div className="lg:hidden flex justify-between my-5 items-center">
+        <li className="text-2xl font-semibold name uppercase">Home</li>
+        <button onClick={() => setOpen(!open)} className='p-5'>
+          <FaAlignJustify className="text-white" />
+        </button>
+      </div>
+      {open && (
+        <ul className="w-[90%] mx-auto lg:hidden flex flex-col justify-between absolute text-slate-200 left-5">
+          <div className="flex flex-col gap-3">
+            <li className="font-bold">About</li>
+            <li className="font-bold">Projects</li>
+            <li className="font-bold">Contact</li>
+            <li className="font-bold resume uppercase p-1 w-20">Resume</li>
+            <li className="">
+              <FaGithub
+                className="hover:text-blue-500 transition 
+           ease-in-out delay-150 hover:-translate-y-1 
+           hover:scale-110 duration-300 text-2xl text-slate-200 cursor-pointer"
+              />
+            </li>
+            <li>
+              <FaLinkedin
+                className="hover:text-blue-500 transition 
+           ease-in-out delay-150 hover:-translate-y-1 
+           hover:scale-110 duration-300 text-2xl text-slate-200 cursor-pointer"
+              />
+            </li>
+            <li>
+              <FaTwitter
+                className="hover:text-blue-500 transition 
+           ease-in-out delay-150 hover:-translate-y-1 
+           hover:scale-110 duration-300 text-2xl text-slate-200 cursor-pointer"
+              />
+            </li>
+          </div>
+        </ul>
+      )}
     </div>
   );
 };

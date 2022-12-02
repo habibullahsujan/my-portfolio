@@ -10,3 +10,27 @@
   left: 340px;
   top: 190px;
 }
+
+.name {
+  background: -webkit-linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.resume {
+  background: linear-gradient(#222, #222),
+    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border: 2px solid transparent;
+}
+.about-section::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  vertical-align: center;
+  width: 60vw;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid black;
+  background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+}
