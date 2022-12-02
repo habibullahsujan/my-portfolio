@@ -63,7 +63,14 @@ const Project = () => {
         </div>
       </div>
       <div className=" p-4 shadow-md text-gray-300 bg-gray-800 rounded-lg">
-        <div className="space-y-4 lg:flex gap-10">
+        <div className="space-y-4 lg:flex lg:flex-row-reverse gap-10">
+        <div className="space-y-2 w-full">
+            <img
+              src="https://i.ibb.co/rv8hFRR/screencapture-recycle-b6b36-web-app-2022-12-02-10-36-06.png"
+              alt=""
+              className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+            />
+          </div>
           <div className="w-full">
             <div className="space-y-2">
               <a className="block">
@@ -110,13 +117,7 @@ const Project = () => {
               </span>
             </div>
           </div>
-          <div className="space-y-2 w-full">
-            <img
-              src="https://i.ibb.co/rv8hFRR/screencapture-recycle-b6b36-web-app-2022-12-02-10-36-06.png"
-              alt=""
-              className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
-            />
-          </div>
+       
         </div>
       </div>
       <div className="p-4 shadow-md text-gray-300 bg-gray-800 rounded-lg">
