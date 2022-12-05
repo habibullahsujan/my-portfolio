@@ -1,12 +1,13 @@
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
+
 import Home from './Components/Home/Home';
 
 const App = () => {
   return (
     <div>
       <Home/>
-      <ToastContainer />
+      <Toaster />
     </div>
   );
 };

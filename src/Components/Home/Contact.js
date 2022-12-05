@@ -1,14 +1,15 @@
 import React from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
+
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-
+ e.preventDefault();
+  
     emailjs
       .sendForm(
         "service_7lbys1p",
@@ -18,8 +19,10 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success("Message send successful.");
-          
+          if(result.status === 200){
+            toast.success('Message Sent Successfully.');
+            e.target.reset()
+          }
         },
         (error) => {
           toast.error(error.message);
@@ -40,6 +43,7 @@ const Contact = () => {
           id=""
           className="block my-5 px-5 py-2 w-full lg:w-1/2 rounded-lg"
           placeholder="Name"
+          required
         />
         <input
           type="email"
@@ -47,6 +51,7 @@ const Contact = () => {
           id=""
           className="block my-5 px-5 py-2 w-full lg:w-1/2 rounded-lg"
           placeholder="Email"
+          required
         />
         <textarea
           name="message"
@@ -55,6 +60,7 @@ const Contact = () => {
           rows="10"
           className="block my-5 px-5 py-2 w-full lg:w-1/2 rounded-lg"
           placeholder="Message"
+          required
         ></textarea>
         <button
           value="Send"
