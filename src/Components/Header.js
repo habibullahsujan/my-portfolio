@@ -20,15 +20,25 @@ const Header = () => {
           </a>
 
           <div className="flex gap-8">
-            <li className="font-bold">
+            <li className="font-bold about">
               <a href="#about">About</a>
             </li>
-            <li className="font-bold">
+            <li className="font-bold project">
               <a href="#projects">Projects</a>
             </li>
-            <li className="font-bold"><a href="#contact">Contact</a></li>
-            <li className="font-bold resume uppercase p-1"><a href="https://drive.google.com/file/d/18j8kcXEJ99som0ok3fS8PWpMmtGwpMK3/view?usp=share_link">Resume</a></li>
-            <li className="">
+            <li className="font-bold contact">
+              <a href="#contact">Contact</a>
+            </li>
+            <li className="font-bold resume uppercase p-1">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/file/d/18j8kcXEJ99som0ok3fS8PWpMmtGwpMK3/view?usp=share_link"
+              >
+                Resume
+              </a>
+            </li>
+            <li className="github">
               <a
                 href="https://github.com/habibullahsujan"
                 target="_blank"
@@ -41,7 +51,7 @@ const Header = () => {
                 />
               </a>
             </li>
-            <li>
+            <li className="linkedin">
               <a
                 href="https://www.linkedin.com/in/habib-ullah-94285a167/"
                 target="_blank"
@@ -55,7 +65,7 @@ const Header = () => {
                 />
               </a>
             </li>
-            <li>
+            <li className="">
               <FaTwitter
                 className="hover:text-blue-500 transition 
                 ease-in-out delay-150 hover:-translate-y-1 
@@ -80,7 +90,16 @@ const Header = () => {
             <li className="font-bold">About</li>
             <li className="font-bold">Projects</li>
             <li className="font-bold">Contact</li>
-            <li className="font-bold resume uppercase p-1 w-20">Resume</li>
+            <li className="font-bold resume uppercase p-1 w-20">
+              {" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/file/d/18j8kcXEJ99som0ok3fS8PWpMmtGwpMK3/view?usp=share_link"
+              >
+                Resume
+              </a>
+            </li>
             <li className="">
               <a
                 href="https://github.com/habibullahsujan"

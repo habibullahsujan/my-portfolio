@@ -4,18 +4,18 @@ import { FaGithub, FaLink } from "react-icons/fa";
 const Project = () => {
   return (
     <div className="block lg:flex gap-10 flex-wrap">
-      <div className="p-4 shadow-md text-gray-300 bg-gray-800 rounded-lg">
+      <div className="p-4 shadow-md text-gray-300 rounded-lg">
         <div className="space-y-4 lg:flex gap-10">
           <div className="space-y-2 w-full">
             <img
               src="https://i.ibb.co/mzWn9Rv/screencapture-jannat-s-kitchen-web-app-2022-12-02-10-04-01.png"
               alt=""
-              className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+              className="block object-cover object-center w-full rounded-md h-72 hover:scale-110 transition duration-300 ease-in-out"
             />
           </div>
           <div className="w-full">
             <div className="space-y-2">
-              <a className="block">
+              <a className="block" href="/">
                 <h3 className="text-xl font-semibold dark:text-violet-400">
                   Online Cloud Kitchen Service
                   <hr />
@@ -62,18 +62,18 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className=" p-4 shadow-md text-gray-300 bg-gray-800 rounded-lg">
+      <div className=" p-4 shadow-md text-gray-300 rounded-lg">
         <div className="space-y-4 lg:flex lg:flex-row-reverse gap-10">
-        <div className="space-y-2 w-full">
+          <div className="space-y-2 w-full">
             <img
               src="https://i.ibb.co/rv8hFRR/screencapture-recycle-b6b36-web-app-2022-12-02-10-36-06.png"
               alt=""
-              className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+              className="block object-cover object-center w-full rounded-md h-72 hover:scale-110 transition duration-300 ease-in-out"
             />
           </div>
           <div className="w-full">
             <div className="space-y-2">
-              <a className="block">
+              <a className="block" href="/">
                 <h3 className="text-xl font-semibold dark:text-violet-400">
                   Used Laptop Resale Website
                   <hr />
@@ -117,21 +117,20 @@ const Project = () => {
               </span>
             </div>
           </div>
-       
         </div>
       </div>
-      <div className="p-4 shadow-md text-gray-300 bg-gray-800 rounded-lg">
+      <div className="p-4 shadow-md text-gray-300 rounded-lg">
         <div className="space-y-4 lg:flex gap-10">
           <div className="space-y-2 w-full">
             <img
               src="https://i.ibb.co/gwPPDdY/screencapture-doctors-portal-58d1b-web-app-2022-12-02-10-54-34.png"
               alt=""
-              className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+              className="block object-cover object-center w-full rounded-md h-72 hover:scale-110 transition duration-300 ease-in-out"
             />
           </div>
           <div className="w-full">
             <div className="space-y-2">
-              <a className="block">
+              <a className="block" href="/">
                 <h3 className="text-xl font-semibold dark:text-violet-400">
                   Doctor's Portal Online Appointment Booking Service
                   <hr />

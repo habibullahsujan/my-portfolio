@@ -1,9 +1,8 @@
 import React from "react";
-import { FaCaretSquareRight } from "react-icons/fa";
 import "../BasicStyles.css";
-
 import Header from "../Header";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import Project from "./Project";
 
 const Home = () => {
@@ -12,57 +11,75 @@ const Home = () => {
       <div>
         <Header />
       </div>
-      <div className="lg:w-[90%] w-full mx-auto">
-        <div className="lg:w-[80%] w-full mx-auto my-20 text-slate-500">
-          <span className="text-6xl font-bold block my-5 heading">
-            Hi, My Name is <span className="name">Habib</span>.
-          </span>
-          <span className="text-2xl font-semibold space-x-3">
-            I build react application for the web. I am a front end developer
-            based in bangladesh. I have develop some font end application.
-          </span>
-          <button className="block my-5 border border-blue-600 px-3 py-2">
-            See My Projects
-          </button>
-        </div>
-        <div className="w-full mx-auto my-32" id="about">
-          <h1 className="text-2xl  text-slate-500 font-semibold about-section my-5">
-            <span className="name">01-</span>About Me
-          </h1>
+      <div className="lg:w-[90%] w-[95%] mx-auto">
+        <div className="lg:w-[80%] w-full mx-auto my-20 text-slate-500 lg:flex">
           <div>
-            <p className=" text-slate-500 text-lg font-semibold">
+            <h3 className="text-6xl font-bold block my-5">
+              Hi, My Name is <span className="name">Habib</span>.
+            </h3>
+            <span className="text-2xl font-semibold space-x-3">
+              I build react application for the web. I am a front end developer
+              based in bangladesh. I have develop some font end application.
+            </span>
+            <button className="block my-5 border border-blue-600 px-3 py-2 shadow-[0_9px_0_rgb(0,0,0)] hover:shadow-[0_4px_0px_rgb(0,0,0)] text-gray-500 font-bold ease-out hover:translate-y-1 transition-all rounded ">
+              See My Projects
+            </button>
+          </div>
+          <div>
+            <iframe
+              className="w-[400px] h-[400px]"
+              title="animation"
+              src="https://lottie.host/?file=1cbd9d11-4998-435c-b604-2f289493b8d3/IAPIuRbXSE.json"
+            ></iframe>
+          </div>
+        </div>
+        <div
+          className="lg:w-full w-[95%] lg:mb-36 mx-auto lg:flex items-center gap-10"
+          id="about"
+        >
+          <div className="lg:w-1/2">
+            <h1 className="text-4xl  text-slate-500 font-semibold about-section my-5">
+              <span className="name">01-</span>About Me
+            </h1>
+            <p className=" text-slate-500 text-xl font-semibold">
               Hello! My name is Habib and I enjoy creating things that live on
               the internet. I am skilled in front-end development. I am
               experienced in HTML, CSS, Bootstrap, Tailwind, JavaScript, React
               JS, Express Js and MongoDB.
             </p>
-            <div className=" text-slate-500">
-              <h5 className="font-semibold text-lg">
-                {" "}
-                Here are a few technologies I've been working with recently:
-              </h5>
-              <ol className="grid grid-cols-1 lg:grid-cols-2 my-5 text-lg font-semibold">
-                <li className="flex items-center gap-2">
-                  <FaCaretSquareRight />
-                  <span>JavaScript (ES6+)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCaretSquareRight />
-                  <span>Tailwind</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCaretSquareRight />
-                  <span>React</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCaretSquareRight />
-                  <span>Express JS</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCaretSquareRight />
-                  <span>MongoDB</span>
-                </li>
-              </ol>
+          </div>
+          <div className=" text-slate-500 my-10 lg:pt-16">
+            <h3 className="text-4xl font-bold my-5">
+              <span className="name"></span>My Skills
+            </h3>
+            <div className="w-full grid grid-cols-3 gap-6 text-white">
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-5 lg:px-10 text-center font-bold ">
+                HTML
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                CSS
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                Bootstrap
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                Tailwind
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                JavaScript
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                React JS
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                Express JS
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                MongoDB
+              </span>
+              <span className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 py-3 px-2 text-center font-bold">
+                Firebase
+              </span>
             </div>
           </div>
         </div>
@@ -79,6 +96,9 @@ const Home = () => {
             <section className="my-20">
               <Contact />
             </section>
+          </div>
+          <div>
+            <Footer />
           </div>
         </div>
       </div>
