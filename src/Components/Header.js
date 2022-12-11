@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaAlignJustify,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../Images/logo.png";
 
 const Header = () => {
@@ -14,10 +15,10 @@ const Header = () => {
     <div className="relative">
       <div className="my-5 text-slate-500 hidden lg:block">
         <ul className="w-[90%] mx-auto flex justify-between">
-          <a href="#home" className="flex items-center gap-3">
+          <Link to={'/'} className="flex items-center gap-3">
             <img className="h-10 w-10" src={logo} alt="" />
             <li className="text-2xl font-semibold name uppercase">Portfolio</li>
-          </a>
+          </Link>
 
           <div className="flex gap-8">
             <li className="font-bold about">
@@ -28,6 +29,9 @@ const Header = () => {
             </li>
             <li className="font-bold contact">
               <a href="#contact">Contact</a>
+            </li>
+            <li className="font-bold contact">
+              <Link to={'/blogs'}>Blog</Link>
             </li>
             <li className="font-bold resume uppercase p-1">
               <a
